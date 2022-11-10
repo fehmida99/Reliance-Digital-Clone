@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+#tv{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+}
+#tv>div{
+   
+   border: 0px solid red;
+   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+   
+}
+#tv>div:hover{
+    cursor: pointer;
+}
+
+
+#tv>div>img{
+    width: 70%;    
+}
+
+#tv>div>img:hover{
+    width: 85%;
+  
+}
+
+#tv>div>.paragraph:hover{
+color:red;
+}
+.paragraph{
+    color: blue;
+}
+#btn-offer{
+    width: 150px;
+    font-weight: bold;
+    background-color: aquamarine;
+    color:red;
+    border-radius: 20px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <p><b style="font-size: 30px;">BEST SELLERS FROM TV |</b> VIEW ALL</p>
+    <div id="tv">
+        <div>
+            <img src="https://www.reliancedigital.in/medias/HISENSE-43A6GE-Smart-LED-492338735-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w3NjY5OXxpbWFnZS9qcGVnfGltYWdlcy9oMTEvaDcwLzk3Nzg4NDI1OTk0NTQuanBnfGFiNzdlZmMxODczMmUyNzdlMDRkZGJjMzEyNTA4YTNhMGVhYjlhYmU0MzYwNDBmNmY4NjBlOGJjNDQwZjEzMjg" alt="">
+            <p class="paragraph">Hisense 108 cm (43 inch) 2Yr Warranty 4K Ultra HD Smart </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹899.00</b></p>
+            <p>MRP: <del>₹3,399.00</del></p>
+            <p>You Save: 73%(₹2,600)</p>
+            <button id="btn-offer">OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Iffalcon-55U71-Television-493179244-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MjUyMXxpbWFnZS9qcGVnfGltYWdlcy9oZDMvaGM0Lzk4OTU3NzUwMTA4NDYuanBnfDhlMGU4MDEzNjUzZGNmYzM4ZTkzNTA2OGUwNDkyY2Y2ZTZkMzI5NzIyZjQzMzgzYzI1OTU0MTY5MGZjYTk5M2Y" alt="">
+            <p class="paragraph">IFFALCON 139.7 cm (55 Inch) Ultra HD (4K) Smart LED TV,
+            </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹799.00</b></p>
+            <p>MRP: <del>₹3,299.00</del></p>
+            <p>You Save: 79%(₹3,100)</p>
+            <button id="btn-offer">OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Itel-G4330IE-Television-493072590-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0MDM2NXxpbWFnZS9qcGVnfGltYWdlcy9oNmIvaDQyLzk4OTU1NjY1MDgwNjIuanBnfDc4NDUxNjU3MGMyYmQ2ZjIwNjIxOThlZTI0ZTRlYmIzZmI1YWUwMzc4NzZkYjhhNTcwMzI3OGMwNjk2ZGZiMjM" alt="">
+            <p class="paragraph">Itel 108 cm (43 inch) Full HD Android Smart LED TV </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹1139.00</b></p>
+            <p>MRP: <del>₹2,599.00</del></p>
+            <p>You Save: 63%(₹1,699)</p>
+            <button id="btn-offer">OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Hisense-55A7H-LED-Smart-TVs-493179250-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w4NDA5NXxpbWFnZS9qcGVnfGltYWdlcy9oNTEvaDIzLzk5MTUxMzAwODU0MDYuanBnfDgzZjgwNzBiNDZmZmM5ZDk4MzFhZDgyZjhjYjdkNzg3ZjNhM2U1MGM4OTdjOWNiMzhjNmNlZGVkOWYzNzQyZjk" alt="">
+            <p class="paragraph">Hisense 139 cm (55 inch) Ultra HD (4K) LED Smart Google TV
+            <p>Deal Price: <b style="font-size: 25px;">₹399.00</b></p>
+            <p>MRP: <del>₹3,485.00</del></p>
+            <p>You Save: 79%(₹3,096)</p>
+            <button id="btn-offer">OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/IFFALCON-43F2A-Television-492338468-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MTMwNXxpbWFnZS9qcGVnfGltYWdlcy9oOWIvaDg5Lzk1ODA4NzU2Nzc3MjYuanBnfDk3ZmIwN2RjZTUxNTA1YTBmMzk5MWY4YjA3OGJmYjJkNGQ3MDFjNmJhNjU1Yjk5MWRhZTNmNTI3ZTE0ZmExNTc" alt="">
+            <p class="paragraph">IFFALCON 109.22 cm (43 inch) Full HD LED Smart TV </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹499.00</b></p>
+            <p>MRP: <del>₹1599.00</del></p>
+            <p>You Save: 84%(₹1,000)</p>
+            <button id="btn-offer">OFFER AVAILABLE</button>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+
