@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* Write all necessery css here  */
+      .navv{
+        text-align: center;
+      }
+      #product-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    #product-container>div{
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        height: 100%;
+        
+    }
+    #product-container>div>img{
+        width: 50%;
+        height: 45%;
+        
+    }
+    #product-container>div:hover{
+        cursor: pointer;   
+    }
+    #product-container>div>button{
+        background-color: rgb(230, 209, 216);
+        width: 180px;
+        height: 30px;
+        border-radius: 40px;
+    }
+    #product-container>div>button:hover{
+        cursor: pointer;
+        width: 250px;
+        background-color: rgb(107, 213, 213);
+    }
+    #product-container>div>img:hover{
+        width: 65%;
+    }
+    
+      /* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+    #product-container{
+        grid-template-columns: repeat(2,1fr); 
+        
+    }
+}
+    /* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+    #product-container{
+        grid-template-columns: repeat(1,1fr); 
+    }
+} 
+
+    </style>
+  </head>
+
+  <body>
+    <div class="navv">
+      <h1 >Electronics Gadgates</h1>
+      <!-- <a href="./index.html">Home</a> -->
+      <!-- <a href="./cart.html">Cart</a> -->
+    </div>
+    <!-- Use this Select Tag for Filtering the Products  -->
+    <select onselect="newSearch()" id="filter">
+      <option value="">Filter By Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Speakers">Speakers</option>
+    </select>
+    <div id="product-container">
+     
+    </div>
+    
+  </body>
+  
+</html>
+
+
+<script>
+  // Write all necessery JS here 
+  let bag = []
+
+  let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      bag.push(data)
+
+      display(bag);
+    })
+    .catch((err) => alert(err))
+
+  function display(bag) {
+    bag.forEach((elem) => {
+      elem.data.forEach((elem) => {
+        let div = document.createElement("div");
+        let my_img = document.createElement("img")
+        my_img.setAttribute("src", elem.img)
+        let brand = document.createElement("h2")
+        brand.innerText = elem.brand
+        let price = document.createElement("h3")
+        price.innerText = elem.price
+        let details = document.createElement("p")
+        details.innerText = elem.details
+        let cat = document.createElement("p");
+        cat.innerText = elem.category
+        let btn = document.createElement("button")
+        btn.innerText = "Add To Cart"
+        btn.addEventListener("click", function () {
+          my_cart(elem)
+        })
+        div.append(my_img, brand, price, details, cat, btn)
+        document.querySelector("#product-container").append(div)
+      })
+    });
+
+  }
+  document.querySelector("#filter").addEventListener("change", my_fill)
+  function my_fill() {
+    let selected = document.querySelector("#filter").value;
+    bag.forEach((elem) => {
+      let x = elem.data.filter((elem) => {
+        return elem.category == selected
+      })
+      my_fun(x)
+    })
+  }
+
+  function my_fun(x) {
+    document.querySelector("#product-container").innerHTML = "";
+    x.forEach((elem) => {
+      let div = document.createElement("div");
+      let my_img = document.createElement("img")
+      my_img.setAttribute("src", elem.img)
+      let brand = document.createElement("h2")
+      brand.innerText = elem.brand
+      let price = document.createElement("h3")
+      price.innerText = elem.price
+      let details = document.createElement("p")
+      details.innerText = elem.details
+      let cat = document.createElement("p");
+      cat.innerText = elem.category
+      let btn = document.createElement("button")
+      btn.innerText = "Add To Cart"
+      div.append(my_img, brand, price, details, cat, btn)
+      document.querySelector("#product-container").append(div)
+    })
+  }
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+
+  function my_cart(elem) {
+    if (cartItems.includes(elem)) {
+      alert("Product Already in Cart")
+    } else {
+      cartItems.push(elem)
+      localStorage.setItem("cart", JSON.stringify(cartItems))
+      alert("Product Added To Cart")
+    }
+  }
+
+</script>
+

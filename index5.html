@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #phone_img{
+        width: 100%;
+        height: 300px;
+      } 
+      .mobile{
+        width: 24%;
+        background-color: black;
+        border: 0px solid white; 
+        height: 35px;
+        font-weight: bold;
+        font-size: 15px;
+        color:white;
+        margin-bottom: 3%;
+      }
+
+    </style>
+</head>
+<body>
+    <img src="" alt="">
+    <img src="" alt="" id="phone_img">
+     
+<button class="mobile" id="stp"><</button>
+<button class="mobile" id="prv"><<</button>
+<button class="mobile" id="nxt">>></button>
+<button class="mobile" id="strt">></button>
+</body>
+</html>
+<script>
+    const iphone = document.querySelector("#phone_img");
+    const butn = document.querySelector("#strt");
+    const butns = document.querySelector("#stp");
+    let btnn1 = document.querySelector("#prv");
+    let btnn2 = document.querySelector("#nxt");
+    let photo = [
+    "https://www.reliancedigital.in/medias/airpods-pro-2nd-gen-Buy-now-NPI-Banner-01-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDM4NjB8aW1hZ2UvanBlZ3xpbWFnZXMvaDkwL2hiMy85OTE1MjAzNTE4NDk0LmpwZ3w1NzZjYjljZGY4M2E3OTMwZmFmOTExNmY3MzE4ZDczYTIxNzUyOWE3YmQyOWQ4YzA5MWRkZmU2NTY4YWMyYTUy",
+    "https://www.reliancedigital.in/medias/Apple-Watch-Series-8-Buy-now-CLP-Banner-30-09-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDE0Mjh8aW1hZ2UvanBlZ3xpbWFnZXMvaGExL2gwNS85OTE1MjU1MzkwMjM4LmpwZ3wwMzIwY2NmMWUzODMyOTBjYTNiMDY0ZDJiN2YwMWNmMzBlMzViZGUzMGM2OGVjNzA0OTZiZGVkNWZlY2EwZjRk",
+    "https://www.reliancedigital.in/medias/iPhone14-Pro-Buy-now-NPI-Banner-18-10-2022.jpg?context=bWFzdGVyfGltYWdlc3w4OTEzMnxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaDhkLzk5MTM2NTcxMzEwMzguanBnfDVlNjcwMmQyZjhkZmVkNTg2NzY5ZWYwODQyODI3NDllZTZiZWM5ZDUxMjZkZGIzNzI4ZTBmODdmNGYxY2EwNTU",
+    "https://www.reliancedigital.in/medias/iPad-10th-Gen-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYzNDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGY2L2hiMS85OTEzNjU2NDEwMTQyLmpwZ3wxNTJiZjhiZDMxYTcyZWJmMGM4MzE4OTdlYjkzOGMwYWMzM2E0Mzk1YWFiNTQzZjdiYmJkOTJlNGQ3Yjk5MDBm",
+    "https://www.reliancedigital.in/medias/Boat-Watch-NPI-Banner-07-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDI4Nzl8aW1hZ2UvanBlZ3xpbWFnZXMvaGY1L2hmOS85OTE2OTExNTgzMjYyLmpwZ3xiYTlhMmVmNjdmNzRlNGQ5Y2EyN2Q3ZTZmNjkzYjVjYjU4MjllMzU1NGUyNjIzZjJiMjNhOWMzZGE0NDE3NTEz",
+    "https://www.reliancedigital.in/medias/iPad-Pro-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYwNjh8aW1hZ2UvanBlZ3xpbWFnZXMvaDNlL2gyMC85OTEzNjU2NTQxMjE0LmpwZ3wwOTcxYjg0MTc5NDQxNDcwNTRjMzcwNjkxYWJlNGI2NDk3ZjkyYzNhNzM5NWY3NzM0NTRiYjA3ODA1MzRiOWFk",
+    ]
+    let ints;
+  
+  
+    let digitalExpress = (array) => {
+        let randomNum = Math.floor(Math.random() * array.length);
+        console.log(randomNum)
+        iphone.setAttribute("src", array[randomNum]);
+        butn.addEventListener("click", function () {
+            ints = setInterval("digitalExpress(photo)", 2000)
+        })
+  
+    }
+    butns.addEventListener("click", function () {
+        clearInterval(ints)
+    })
+    let factor = 0
+    btnn1.addEventListener("click", function () {
+        clearInterval(ints)
+        factor++;
+        if (factor >= photo.length) {
+            factor = 0;
+            iphone.src = photo[factor];
+        } else {
+            iphone.src = photo[factor];
+        }
+    })
+    btnn2.addEventListener("click", function () {
+        clearInterval(ints)
+        factor--;
+        if (factor < 0) {
+            factor = photo.length - 1;
+            iphone.src = photo[factor];
+        } else {
+            iphone.src = photo[factor];
+        }
+    })
+  
+  
+    digitalExpress(photo)
+  
+  </script>
+     
+  
