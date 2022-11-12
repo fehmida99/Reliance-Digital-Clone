@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> out layer </title>
+
+<style>
+#gadget{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+}
+#gadget>div{
+   
+   border: 0px solid red;
+   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+   
+}
+#gadget>div:hover{
+    cursor: pointer;
+}
+
+
+#gadget>div>img{
+    width: 70%;    
+}
+
+#gadget>div>img:hover{
+    width: 85%;
+  
+}
+
+#gadget>div>.para:hover{
+color:red;
+}
+.para{
+    color: blue;
+}
+button{
+    width: 150px;
+    font-weight: bold;
+    background-color: aquamarine;
+    color:red;
+    border-radius: 20px;
+}
+</style>
+
+</head>
+<body>
+    <p><b style="font-size: 30px;">DIGITAL AUDIO FEST |</b> VIEW ALL</p>
+    <div id="gadget">
+        <div>
+            <img src="https://www.reliancedigital.in/medias/boAt-Stone-Grenade-Speaker-491893336-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w1MzI1MDl8aW1hZ2UvcG5nfGltYWdlcy9oMWYvaDI0Lzk3NzUyNzYwNjQ3OTgucG5nfDE1M2UxZjljY2Y2MDFmYWM4NGU1ZTUzNTdmMTQxOGIzNjExNzllY2MzODEzODBlNDMzOGMyYWE1OTMzYjFhMDg" alt="">
+            <p class="para">boAt Stone Grenade 5W Portable Wireless Speaker With Multiple </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹899.00</b></p>
+            <p>MRP: <del>₹3,499.00</del></p>
+            <p>You Save: 74%(₹2,600)</p>
+            <button>OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/pTron-Basspods-P181-Bluetooth-Earphones-492796965-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wxNjkzNTZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGNkL2hlMS85ODI1ODk0NjI5NDA2LmpwZ3xhODc1MTY0NmY0YWVmYzVmMWQ5MTk3ODVjMDk1YzQ4ZmU2YTQ1MzcyOTM0MjFiYWJkNjNiNTg5MzY3NjI3NDJm" alt="">
+            <p class="para">boAt Rockerz 255 Pro Wireless Neckband Earphone
+            </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹799.00</b></p>
+            <p>MRP: <del>₹3,999.00</del></p>
+            <p>You Save: 78%(₹3,100)</p>
+            <button>OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/boAt-Rockerz-255-Pro-Airdopes-492913061-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wzNTI1NXxpbWFnZS9qcGVnfGltYWdlcy9oZWQvaDk0Lzk5MDQ1MTUzMTc3OTAuanBnfDdiM2RhNzcxNDcwYWRiNTNmNTY2N2JkNDZjMjkxYTdlYTE1NzhlY2FlMDE1NmYzZThhOTJjNjZiNjljYjc0Y2M" alt="">
+            <p class="para">pTron Basspods P181 Bluetooth 5.1 Wireless Headphones, 32Hrs </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹1139.00</b></p>
+            <p>MRP: <del>₹2,499.00</del></p>
+            <p>You Save: 64%(₹1,699)</p>
+            <button>OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Hammer-Sting-3-0-Earphone-492796748-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MjE0NHxpbWFnZS9qcGVnfGltYWdlcy9oZjcvaGYwLzk4MTU4MjE5NzU1ODIuanBnfDcxMjJkNWU1NjY1MmJiOThlOTRhOTMxMTdmMzZlMjlmNzY1MDg1MTVjNjEyY2UyMzJkZTc5MmYxNzNmMmU3YTc" alt="">
+            <p class="para">Hammer Sting 3 Bluetooth Wireless Neckband Earphone with Sweat-proof</p>
+            <p>Deal Price: <b style="font-size: 25px;">₹399.00</b></p>
+            <p>MRP: <del>₹3,495.00</del></p>
+            <p>You Save: 89%(₹3,096)</p>
+            <button>OFFER AVAILABLE</button>
+        </div>
+        <div>
+            <img src="https://www.reliancedigital.in/medias/Reconnect-BE01802-Headphone-Earphone-492796670-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w2MTc5OHxpbWFnZS9qcGVnfGltYWdlcy9oYTIvaDg1Lzk4OTU5Mjk5NzA3MTguanBnfDcwMzYwOTlkZGFhNmQ0NGE3ODk3NDRjYzA0NjY3ZTAzMDQwNzNmNmQ1MmRjYTgxNDQ2ZjMzYWZkYTdhOWNhNzI" alt="">
+            <p class="para">Reconnect Dank Bluetooth Earphone, with IPx4, water resistance, 16Hrs </p>
+            <p>Deal Price: <b style="font-size: 25px;">₹499.00</b></p>
+            <p>MRP: <del>₹1499.00</del></p>
+            <p>You Save: 74%(₹1,000)</p>
+            <button>OFFER AVAILABLE</button>
+        </div>
+        
+    </div>
+</body>
+</html>
+

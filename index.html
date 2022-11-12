@@ -3,6 +3,7 @@
 <head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitel-Express</title>
@@ -23,6 +24,305 @@
            <a  style="color:white; text-decoration: none;"  href="signup.html"> Login</a></p></div>
     </div>
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitel-Express</title>
+
+    <style>
+       
+    .header{
+     display: flex;
+     border: 0px solid red;
+     height: 130px;
+     /* text-align: center; */
+     align-items: center;
+     background-color: rgb(47, 2, 89);
+    
+    }
+    .header>div{
+      width: 200px;
+
+    }
+
+    #logo{
+      /* border-radius: 45px; */
+      width: 138px;
+    }
+
+    #center{
+      width: 450px;
+      height: 30px;
+      border-radius: 20px;
+      padding: 5px 10px;
+     
+
+    }
+    #big{
+      color: white;
+    }
+    #big::first-letter{
+      font-size:80px;
+     color: orange;
+     font-weight: bold;
+    }
+    
+       .nav{
+       display: flex;
+       width: 100%;
+       background-color:rgb(5, 5, 125) ;
+       height: 40px;
+       padding-bottom: 12px;
+       color: white;
+       justify-content: space-around;
+       align-content: center;
+       
+      }
+      #banner{
+        width: 100%;
+        height: 300px;
+      }
+      
+      #img1{
+        width: 100%;
+        height: 300px;
+      } 
+      .first{
+        width: 24%;
+        background-color:rgb(5, 5, 125) ;
+        border: 0px solid white; 
+        height: 35px;
+        font-weight: bold;
+        font-size: 15px;
+        color:white;
+        margin-bottom: 3%;
+      }
+
+
+      #stop{
+        margin-left: 17px;
+      }
+     /* MIDDLE CSS */
+     #gadget{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-bottom: 3%;
+
+}
+#gadget>div{
+   
+   border: 0px solid red;
+   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+   
+}
+#gadget>div:hover{
+    cursor: pointer;
+}
+
+
+#gadget>div>img{
+    width: 70%;    
+}
+
+#gadget>div>img:hover{
+    width: 85%;
+  
+}
+
+#gadget>div>.para:hover{
+color:red;
+}
+.para{
+    color: blue;
+}
+.butn{
+    width: 200px;
+    /* font-weight: bold; */
+    background-color: aquamarine;
+    color:red;
+    border-radius: 20px;
+    
+}
+/* tv css */
+#tv{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+}
+#tv>div{
+   
+   border: 0px solid red;
+   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+   
+}
+#tv>div:hover{
+    cursor: pointer;
+}
+
+
+#tv>div>.led{
+    width: 70%;    
+}
+
+#tv>div>.led:hover{
+    width: 85%;
+  
+}
+
+#tv>div>.paragraph:hover{
+color:red;
+}
+.paragraph{
+    color: blue;
+}
+.btn-offer{
+    width: 200px;
+    font-weight: bold;
+    background-color: aquamarine;
+    color:red;
+    border-radius: 15px;
+    margin-bottom: 10%;
+}
+/* BATMAN CSS */
+#great{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:50px 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            width:100%;
+            margin-top: 4%;
+
+        }
+        
+       #great>div>.bat{
+        width: 90%;
+       }
+       #fem{
+        font-size: 30px;
+       }
+
+      /* Evaluation css part */
+      #phone_img{
+        width: 100%;
+        height: 300px;
+      } 
+      .mobile{
+        width: 24%;
+        background-color: black;
+        border: 0px solid white; 
+        height: 35px;
+        font-weight: bold;
+        font-size: 15px;
+        color:white;
+        margin-bottom: 3%;
+      }
+
+      /* LAST PART */
+      
+      .navv{
+        text-align: center;
+      }
+      #product-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+    #product-container>div{
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        height: 100%;
+        
+    }
+    #product-container>div>img{
+        width: 50%;
+        height: 45%;
+        
+    }
+    #product-container>div:hover{
+        cursor: pointer;   
+    }
+    #product-container>div>button{
+        background-color: rgb(230, 209, 216);
+        width: 180px;
+        height: 30px;
+        border-radius: 40px;
+    }
+    #product-container>div>button:hover{
+        cursor: pointer;
+        width: 250px;
+        background-color: rgb(107, 213, 213);
+    }
+    #product-container>div>img:hover{
+        width: 65%;
+    }
+
+    /* FOOTER CSS */
+    #dvd{
+              width: 100%;
+              height: 550px;
+              background-color: #8c0909;
+        }
+     #dslr{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        height: auto;
+        border:  0px solid blue;
+        /* background-color:#e42529; */
+        color: white;
+
+     }
+     .fb{
+        width: 150px;
+       
+     }
+     .twiter{
+        color: white;
+        /* margin-left: 70px; */
+     }
+     .logos{
+        width: 30px;
+        
+     }
+     #hina{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 6%;
+     }
+
+
+
+
+
+      /* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+    #product-container{
+        grid-template-columns: repeat(2,1fr); 
+        
+    }
+}
+    /* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+    #product-container{
+        grid-template-columns: repeat(1,1fr); 
+    }
+} 
+
+
+
+          </style>
+</head>
+<body>
+<div class="header">
+<div> <img id="logo" src="/VS-PRACTICE/logo.jpeg" alt="logo"></div>
+<div><h1 id="big">Digital Express</h1></div>
+<div><input  type="text" id="center" placeholder="Find your favourite products"></div>
 
 </div>
 
@@ -101,6 +401,7 @@
 
 
 
+
     <!-- LAST PART -->
 
 <div class="navv">
@@ -126,6 +427,8 @@
   <div id="product-container">
    
   </div>
+
+
 
 
 
@@ -185,6 +488,9 @@
 
 
 
+
+
+
 <!-- BATMAN -->
 <p><b id="fem">GREAT DEALS ON ELECTRONICS</b></p>
   <div id="great">
@@ -225,6 +531,7 @@
 
 <!-- LAST PART -->
 
+
 <!-- <div class="navv">
     <h1 >BEST SELLING ACCESSORIES</h1>
     <a href="./index.html">Home</a>
@@ -232,6 +539,15 @@
   <!-- </div> -->
   <!-- Use this Select Tag for Filtering the Products  -->
   <!-- <select onselect="newSearch()" id="filter">
+
+<div class="navv">
+    <h1 >BEST SELLING ACCESSORIES</h1>
+    <!-- <a href="./index.html">Home</a> -->
+    <!-- <a href="./cart.html">Cart</a> -->
+  </div>
+  <!-- Use this Select Tag for Filtering the Products  -->
+  <select onselect="newSearch()" id="filter">
+
     <option value="">Filter By Category</option>
     <option value="Laptop">Laptop</option>
     <option value="Mobile">Mobile</option>
@@ -239,15 +555,26 @@
   </select>
   <div id="product-container">
    
+
   </div> --> 
+
+  </div>
+
 
 
 
   <!-- SNIPBOTTOM PART -->
+
   <img src="/mobile.jpeg" alt="">
   <img src="/tv.jpeg" alt="">
   <img src="/watch.jpeg" alt="">
   <img src="/pic pic.jpeg" alt="">
+
+  <img src="/VS-PRACTICE/mobile.jpeg" alt="">
+  <img src="/VS-PRACTICE/watch.jpeg" alt="">
+  <img src="/VS-PRACTICE/tv.jpeg" alt="">
+  <img src="/VS-PRACTICE/pic pic.jpeg" alt="">
+
 
 <!-- FOOTER -->
 <div id="dvd">
@@ -318,11 +645,205 @@
            
     </div>
 </div>
+
 <!-- <script src="index.js"></script> -->
+
+
 
 </body>
 </html>
 
 
-
 <script src="index1.js"></script>
+
+<script>
+  const images = document.querySelector("#img1");
+  const button = document.querySelector("#start");
+  const buttons = document.querySelector("#stop");
+  let btn1 = document.querySelector("#prev");
+  let btn2 = document.querySelector("#next");
+  let image = [
+  "https://www.reliancedigital.in/medias/Audio-Fest-Carousel-Banner-07-11-2022.jpg?context=bWFzdGVyfGltYWdlc3w4NzQyN3xpbWFnZS9qcGVnfGltYWdlcy9oNzEvaDc2Lzk5MTgyMDE0MzAwNDYuanBnfDgyOGRjYjJiN2E2MTgxM2ZmNGM1YTk5YmRmNzQ3YjFkMTZiMTQxNmJjN2U1NGY4ZTk1MGZjYzI2YzU3OTU4NWQ",
+      "https://www.reliancedigital.in/medias/Digital-Big-Screen-Fest-Carousel-Banner-01-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMzA3Njd8aW1hZ2UvanBlZ3xpbWFnZXMvaDE1L2g4OS85OTE2MTg4MDAwMjg2LmpwZ3xlZGFlYjkxOTc2MTFiZDkzYTkwZDllNGU0YTYxYmNmM2UxNjRkMTZjMDQwMWM1ZGE3Yjk0M2E4MmI1OWI2MjM0",
+      "https://www.reliancedigital.in/medias/Motorola-Carousel-Banner.jpg?context=bWFzdGVyfGltYWdlc3w2NjE5MXxpbWFnZS9qcGVnfGltYWdlcy9oZTIvaGUwLzk5MTgzMzYxNzIwNjIuanBnfDIzMzY2Y2ZjMTcyNWY4ZWUyZjIxNDk2YjZiNjdlYmY4YzE5MjM4ZTNlODAyZmNiOGI0ZGQ3NjhjYmQ5MmM5MjE",
+      "https://www.reliancedigital.in/medias/Winter-Sale-Carousel-Banner-2022.jpg?context=bWFzdGVyfGltYWdlc3w3ODA1OXxpbWFnZS9qcGVnfGltYWdlcy9oOGMvaDU3Lzk5MTgzMzY0MzQyMDYuanBnfDkxOGNjMWJiMjExYWUzYTQ0ODMzMTk5MjQ0YzY0YmVhNTE5ZjQxZTZjNzc4ZTRhNDhjYjc3N2I3NmZjNmM2ZDI",
+  
+  ]
+  let int;
+
+
+  let generateRandomPicture = (array) => {
+      let randomNum = Math.floor(Math.random() * array.length);
+      console.log(randomNum)
+      images.setAttribute("src", array[randomNum]);
+      button.addEventListener("click", function () {
+          int = setInterval("generateRandomPicture(image)", 2000)
+      })
+
+  }
+  buttons.addEventListener("click", function () {
+      clearInterval(int)
+  })
+  let count = 0
+  btn1.addEventListener("click", function () {
+      clearInterval(int)
+      count++;
+      if (count >= image.length) {
+          count = 0;
+          images.src = image[count];
+      } else {
+          images.src = image[count];
+      }
+  })
+  btn2.addEventListener("click", function () {
+      clearInterval(int)
+      count--;
+      if (count < 0) {
+          count = image.length - 1;
+          images.src = image[count];
+      } else {
+          images.src = image[count];
+      }
+  })
+
+
+  generateRandomPicture(image)
+
+// EVALUATION PART
+const iphone = document.querySelector("#phone_img");
+    const butn = document.querySelector("#strt");
+    const butns = document.querySelector("#stp");
+    let btnn1 = document.querySelector("#prv");
+    let btnn2 = document.querySelector("#nxt");
+    let photo = [
+    "https://www.reliancedigital.in/medias/airpods-pro-2nd-gen-Buy-now-NPI-Banner-01-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDM4NjB8aW1hZ2UvanBlZ3xpbWFnZXMvaDkwL2hiMy85OTE1MjAzNTE4NDk0LmpwZ3w1NzZjYjljZGY4M2E3OTMwZmFmOTExNmY3MzE4ZDczYTIxNzUyOWE3YmQyOWQ4YzA5MWRkZmU2NTY4YWMyYTUy",
+    "https://www.reliancedigital.in/medias/Apple-Watch-Series-8-Buy-now-CLP-Banner-30-09-2022.jpg?context=bWFzdGVyfGltYWdlc3wxNDE0Mjh8aW1hZ2UvanBlZ3xpbWFnZXMvaGExL2gwNS85OTE1MjU1MzkwMjM4LmpwZ3wwMzIwY2NmMWUzODMyOTBjYTNiMDY0ZDJiN2YwMWNmMzBlMzViZGUzMGM2OGVjNzA0OTZiZGVkNWZlY2EwZjRk",
+    "https://www.reliancedigital.in/medias/iPhone14-Pro-Buy-now-NPI-Banner-18-10-2022.jpg?context=bWFzdGVyfGltYWdlc3w4OTEzMnxpbWFnZS9qcGVnfGltYWdlcy9oOWUvaDhkLzk5MTM2NTcxMzEwMzguanBnfDVlNjcwMmQyZjhkZmVkNTg2NzY5ZWYwODQyODI3NDllZTZiZWM5ZDUxMjZkZGIzNzI4ZTBmODdmNGYxY2EwNTU",
+    "https://www.reliancedigital.in/medias/iPad-10th-Gen-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYzNDB8aW1hZ2UvanBlZ3xpbWFnZXMvaGY2L2hiMS85OTEzNjU2NDEwMTQyLmpwZ3wxNTJiZjhiZDMxYTcyZWJmMGM4MzE4OTdlYjkzOGMwYWMzM2E0Mzk1YWFiNTQzZjdiYmJkOTJlNGQ3Yjk5MDBm",
+    "https://www.reliancedigital.in/medias/Boat-Watch-NPI-Banner-07-11-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDI4Nzl8aW1hZ2UvanBlZ3xpbWFnZXMvaGY1L2hmOS85OTE2OTExNTgzMjYyLmpwZ3xiYTlhMmVmNjdmNzRlNGQ5Y2EyN2Q3ZTZmNjkzYjVjYjU4MjllMzU1NGUyNjIzZjJiMjNhOWMzZGE0NDE3NTEz",
+    "https://www.reliancedigital.in/medias/iPad-Pro-NPI-Banner-Available-now-27-10-2022.jpg?context=bWFzdGVyfGltYWdlc3wxMDYwNjh8aW1hZ2UvanBlZ3xpbWFnZXMvaDNlL2gyMC85OTEzNjU2NTQxMjE0LmpwZ3wwOTcxYjg0MTc5NDQxNDcwNTRjMzcwNjkxYWJlNGI2NDk3ZjkyYzNhNzM5NWY3NzM0NTRiYjA3ODA1MzRiOWFk",
+    ]
+    let ints;
+  
+  
+    let digitalExpress = (array) => {
+        let randomNum = Math.floor(Math.random() * array.length);
+        console.log(randomNum)
+        iphone.setAttribute("src", array[randomNum]);
+        butn.addEventListener("click", function () {
+            ints = setInterval("digitalExpress(photo)", 2000)
+        })
+  
+    }
+    butns.addEventListener("click", function () {
+        clearInterval(ints)
+    })
+    let factor = 0
+    btnn1.addEventListener("click", function () {
+        clearInterval(ints)
+        factor++;
+        if (factor >= photo.length) {
+            factor = 0;
+            iphone.src = photo[factor];
+        } else {
+            iphone.src = photo[factor];
+        }
+    })
+    btnn2.addEventListener("click", function () {
+        clearInterval(ints)
+        factor--;
+        if (factor < 0) {
+            factor = photo.length - 1;
+            iphone.src = photo[factor];
+        } else {
+            iphone.src = photo[factor];
+        }
+    })
+  
+  
+    digitalExpress(photo)
+
+// LOWER PART
+
+let bag = []
+
+let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    bag.push(data)
+
+    display(bag);
+  })
+  .catch((err) => alert(err))
+
+function display(bag) {
+  bag.forEach((elem) => {
+    elem.data.forEach((elem) => {
+      let div = document.createElement("div");
+      let my_img = document.createElement("img")
+      my_img.setAttribute("src", elem.img)
+      let brand = document.createElement("h2")
+      brand.innerText = elem.brand
+      let price = document.createElement("h3")
+      price.innerText = elem.price
+      let details = document.createElement("p")
+      details.innerText = elem.details
+      let cat = document.createElement("p");
+      cat.innerText = elem.category
+      let btn = document.createElement("button")
+      btn.innerText = "Add To Cart"
+      btn.addEventListener("click", function () {
+        my_cart(elem)
+      })
+      div.append(my_img, brand, price, details, cat, btn)
+      document.querySelector("#product-container").append(div)
+    })
+  });
+
+}
+document.querySelector("#filter").addEventListener("change", my_fill)
+function my_fill() {
+  let selected = document.querySelector("#filter").value;
+  bag.forEach((elem) => {
+    let x = elem.data.filter((elem) => {
+      return elem.category == selected
+    })
+    my_fun(x)
+  })
+}
+
+function my_fun(x) {
+  document.querySelector("#product-container").innerHTML = "";
+  x.forEach((elem) => {
+    let div = document.createElement("div");
+    let my_img = document.createElement("img")
+    my_img.setAttribute("src", elem.img)
+    let brand = document.createElement("h2")
+    brand.innerText = elem.brand
+    let price = document.createElement("h3")
+    price.innerText = elem.price
+    let details = document.createElement("p")
+    details.innerText = elem.details
+    let cat = document.createElement("p");
+    cat.innerText = elem.category
+    let btn = document.createElement("button")
+    btn.innerText = "Add To Cart"
+    div.append(my_img, brand, price, details, cat, btn)
+    document.querySelector("#product-container").append(div)
+  })
+}
+let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+
+function my_cart(elem) {
+  if (cartItems.includes(elem)) {
+    alert("Product Already in Cart")
+  } else {
+    cartItems.push(elem)
+    localStorage.setItem("cart", JSON.stringify(cartItems))
+    alert("Product Added To Cart")
+  }
+}
+
+
+
