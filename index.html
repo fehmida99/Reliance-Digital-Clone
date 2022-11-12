@@ -3,6 +3,28 @@
 <head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitel-Express</title>
+
+    
+</head>
+<body>
+<div class="header">
+    <div id="cartt">
+        <div><img id="logo" src="/logo.jpeg" alt="logo"></div>
+        <div><h1 id="big">Digital Express</h1></div>
+        <div><input  type="text" id="center" placeholder="Find your favourite products"></div>
+    </div>
+    <div id="ico">
+        <div class="icon"><img class="icons" src="https://img.icons8.com/color/2x/order-delivered.png" alt=""><p>Pincode</p></div>
+        <div class="icon"><img class="icons" src="https://img.icons8.com/color/2x/shopping-cart.png" alt=""><p>Cart</p></div>
+        <div class="icon"><img class="icons" src="https://cdn-icons-png.flaticon.com/128/265/265674.png" alt=""><p>
+           <a  style="color:white; text-decoration: none;"  href="signup.html"> Login</a></p></div>
+    </div>
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitel-Express</title>
 
@@ -376,6 +398,42 @@ color:red;
         </div>
         
     </div>
+
+
+
+
+    <!-- LAST PART -->
+
+<div class="navv">
+    <h1 >BEST SELLING ACCESSORIES</h1>
+    <!-- <a href="./index.html">Home</a> -->
+    <!-- <a href="./cart.html">Cart</a> -->
+  </div>
+  <!-- Use this Select Tag for Filtering the Products  -->
+  <select onselect="newSearch()" id="filter">
+    <option value="">Filter By Category</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Mobile">Mobile</option>
+    <option value="Speakers">Speakers</option>
+  </select>
+
+
+  <select id="box">
+    <option value="">FILTER BY PRICE</option>
+    <option value="LTH">Lower To Higher Price</option>
+    <option value="HTL">Higher To Lower Price</option>
+ </select>   
+
+  <div id="product-container">
+   
+  </div>
+
+
+
+
+
+
+
                    <!-- tv -->
 <p><b style="font-size: 30px;">BEST SELLERS FROM TV |</b> VIEW ALL</p>
 <div id="tv">
@@ -423,6 +481,16 @@ color:red;
     
 </div>
 
+
+
+
+
+
+
+
+
+
+
 <!-- BATMAN -->
 <p><b id="fem">GREAT DEALS ON ELECTRONICS</b></p>
   <div id="great">
@@ -463,6 +531,15 @@ color:red;
 
 <!-- LAST PART -->
 
+
+<!-- <div class="navv">
+    <h1 >BEST SELLING ACCESSORIES</h1>
+    <a href="./index.html">Home</a>
+     <a href="./cart.html">Cart</a> -->
+  <!-- </div> -->
+  <!-- Use this Select Tag for Filtering the Products  -->
+  <!-- <select onselect="newSearch()" id="filter">
+
 <div class="navv">
     <h1 >BEST SELLING ACCESSORIES</h1>
     <!-- <a href="./index.html">Home</a> -->
@@ -470,6 +547,7 @@ color:red;
   </div>
   <!-- Use this Select Tag for Filtering the Products  -->
   <select onselect="newSearch()" id="filter">
+
     <option value="">Filter By Category</option>
     <option value="Laptop">Laptop</option>
     <option value="Mobile">Mobile</option>
@@ -477,15 +555,26 @@ color:red;
   </select>
   <div id="product-container">
    
+
+  </div> --> 
+
   </div>
 
 
 
+
   <!-- SNIPBOTTOM PART -->
+
+  <img src="/mobile.jpeg" alt="">
+  <img src="/tv.jpeg" alt="">
+  <img src="/watch.jpeg" alt="">
+  <img src="/pic pic.jpeg" alt="">
+
   <img src="/VS-PRACTICE/mobile.jpeg" alt="">
   <img src="/VS-PRACTICE/watch.jpeg" alt="">
   <img src="/VS-PRACTICE/tv.jpeg" alt="">
   <img src="/VS-PRACTICE/pic pic.jpeg" alt="">
+
 
 <!-- FOOTER -->
 <div id="dvd">
@@ -557,9 +646,15 @@ color:red;
     </div>
 </div>
 
+<!-- <script src="index.js"></script> -->
+
+
 
 </body>
 </html>
+
+
+<script src="index1.js"></script>
 
 <script>
   const images = document.querySelector("#img1");
