@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Express - Memory-Card</title>
+
+    <style>
+   .header{
+   display: flex;
+   background-color: rgb(47, 2, 89);
+   /* justify-content: space-evenly; */
+}
+.header>#ico{
+   display: flex;
+   width: 350px;
+   justify-content: end;
+   margin-left: 350px;
+   justify-content: space-evenly;
+   margin-top: 2%;
+}
+#ico>div>p{
+   color: white;
+}
+
+#cartt{
+    display: flex;
+    border: 0px solid red;
+    height: 130px;
+    /* text-align: center; */
+    align-items: center;
+    
+   
+   }
+   #cartt>div{
+     width: 200px;
+
+   }
+    .icon>.icons{
+      width: 30px;
+      height: auto;
+      
+    } 
+   #logo{
+     /* border-radius: 45px; */
+     width: 138px;
+   }
+
+   #center{
+     width: 450px;
+     height: 30px;
+     border-radius: 20px;
+     padding: 5px 10px;
+    
+
+   }
+   #big{
+     color: white;
+   }
+   #big::first-letter{
+     font-size:80px;
+    color: orange;
+    font-weight: bold;
+   }
+   
+      .nav{
+      display: flex;
+      width: 100%;
+      background-color:rgb(5, 5, 125) ;
+      height: 40px;
+      padding-bottom: 12px;
+      color: white;
+      justify-content: space-around;
+      align-content: center;
+     }
+    
+     /* CSS PART OF DROPDOWN */
+     #down {
+      display: none;
+      position: absolute;
+      background-color: #030178;
+      width: 195px;
+      height: 490px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      margin-right: 84%;
+      
+    }
+    #down p {
+     
+      padding: 5px 12px;
+      
+      display: block;
+      font-size: px;
+      color: white;
+      
+    }
+    
+    #down p:hover {background-color: #d71616}
+    
+    #navbot:hover #down {
+      display: block;
+    }
+
+/* CSS DROPDOWN DONE */
+
+/* memory card css */
+#mc{    
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+
+
+}
+#mem{
+    text-align: center;
+}
+#mem>p{
+    color: orangered;
+}
+ .hover:hover{
+    width: 110%;
+ }
+
+
+#gadget>div{
+   
+   border: 0px solid red;
+   /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+   
+}
+#gadget>div:hover{
+    cursor: pointer;
+}
+
+
+#gadget>div>img{
+    width: 70%;    
+}
+
+#gadget>div>img:hover{
+    width: 85%;
+  
+}
+
+#gadget>div>.para:hover{
+color:red;
+}
+.para{
+    color: blue;
+}
+button{
+    width: 150px;
+    font-weight: bold;
+    background-color: aquamarine;
+    color:red;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+#dvd{
+              width: 100%;
+              height: 550px;
+              background-color: #8c0909;
+        }
+     #dslr{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        height: auto;
+        border:  0px solid blue;
+        /* background-color:#e42529; */
+        color: white;
+
+     }
+     .fb{
+        width: 150px;
+       
+     }
+     .twiter{
+        color: white;
+        /* margin-left: 70px; */
+     }
+     .logos{
+        width: 30px;
+        
+     }
+     #hina{
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 6%;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div id="cartt">
+            <div><img id="logo" src="/logo.jpeg" alt="logo"></div>
+            <div><h1 id="big">Digital Express</h1></div>
+            <div><input  type="text" id="center" placeholder="Find your favourite products"></div>
+        </div>
+        <div id="ico">
+            <div class="icon"><img class="icons" src="https://img.icons8.com/color/2x/order-delivered.png" alt=""><p>Pincode</p></div>
+            <div class="icon"><img class="icons" src="https://img.icons8.com/color/2x/shopping-cart.png" alt=""><p>Cart</p></div>
+            <div class="icon"><img class="icons" src="https://cdn-icons-png.flaticon.com/128/265/265674.png" alt=""><p>
+               <a  style="color:white; text-decoration: none;"  href="signup.html"> Login</a></p></div>
+        </div>    
+    
+    </div>
+
+    <div id="navbot" class="nav">
+        <div id="down">
+          <h5 id="drop"> MOBILE & TABLETS</h5>
+          <p> <a style="text-decoration:none; color: white;" href="./Electronics.html">Electronic Accessories</a> </p>
+         
+          <p><a style="text-decoration:none; color: white;" href="./memory-card.html">Memory Cards</a></p>
+          <p>Boat New Launch</p>
+          <p>Accessories</p>
+          <p>Tablet Accessories</p>
+          <p>Wearable Technology</p>
+          <p>Mobile Grips & Stands</p>
+          <p>Car Mobile Holders</p>
+          <p>Cables & Cords</p>
+          <p>Mobile Accessories</p>
+         
+        </div>
+      
+      <h5>MOBILE & TABLETS</h5>
+      <h5>AUDIO</h5>
+      <h5>TELEVISIONS</h5>
+      
+      <h5>HOME APPLIANCES</h5>
+      <h5>COMPUTERS</h5>
+      <h5>CAMERAS</h5>
+      <h5>KITCHEN APPLIANCES</h5>
+      <h5>PERSONAL CARE</h5>
+      <h5>ACCESSORIES</h5>
+
+      
+</div>
+
+<!-- MEMORY CARD -->
+<img src="https://www.reliancedigital.in/medias/MicroSD-Banner-1365x260px.jpg?context=bWFzdGVyfGltYWdlc3wyNTMzMzZ8aW1hZ2UvanBlZ3xpbWFnZXMvaGI3L2gzZC85ODczMTU1NTg4MTI2LmpwZ3xlYTYwNmE5OWFmYTYyZjUzNTQ0NDFmNzc4ZDJkZTQzZDE3MDE1Y2Q4NDFkYTJlMzUzYzM5YTZkMDQzZDVkNTEw" alt="">
+<div id="mem">
+    <p><b style="font-size: 30px;">MEMORY CARDS </b></p>
+</div>
+
+<div  id="mc">
+    <div>
+        <img src="./M.card.jpeg" alt=""><br>
+    </div>
+    <div>
+        
+        <img src="./brand-mc.jpeg" alt="">
+    </div>
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/Sandisk-SDCFE-512G-GN4NN-SDCARD-491998025-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w3MzgxfGltYWdlL2pwZWd8aW1hZ2VzL2hiOS9oNjgvOTc2MDcyOTM2NjU1OC5qcGd8OWFiODRmMTgzMzAzOWQ3M2MxMGQyZTkwODdkYWE1OGE0YjhiMjc2NjA5YmI3ZWJhMTYyNDUzNDFiODVhNzc2Yg" alt="">
+        <p class="para">SanDisk Extreme Pro Cfexpress Type B Card, Black, 512GB </p>
+        <p>Deal Price: <b style="font-size: 25px;">₹50,999</b></p>
+        <p>MRP: <del>₹91,000.00</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+    <div>
+        <img class="hover" src=https://www.reliancedigital.in/medias/SanDisk-SDSQUAR-064G-GN6MA-Memory-Cards-491336333-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0ODI1OXxpbWFnZS9qcGVnfGltYWdlcy9oOTYvaDZmLzg5MjA3MzQxNzExNjYuanBnfDM3OWVkZDY4YjNlMWJiMTc5MjUwYTlhZTgwNjZkN2Y2N2FjNTQyMjc3MDIxMjkyN2IxZWY2NTg3ZWY0MzI0NjM" alt="">
+        <p class="para">Sandisk Ultra 256 GB microSDXC Memory Card</p>
+        <p>Deal Price: <b style="font-size: 25px;">₹2,009</b></p>
+        <p>MRP: <del>₹6,750</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/be602378-eded-4256-b311-8e4152d6d4e5-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1MzA1MnxpbWFnZS9wbmd8aW1hZ2VzL2hlZS9oNzAvODg0NTcyMzY5NzE4Mi5wbmd8YTRjYmUwYjQ3YzMyYjM1MTFiNzllNjY3YzFiYzUyZWFjMzFkODI4MzY1ODQyY2ZlMjk0ODYzMjY4NjI1YjFhMw" alt="">
+        <p class="para">Sandisk Ultra 16 GB microSDHC Memory Card </p>
+        <p>Deal Price: <b style="font-size: 25px;">₹599.00</b></p>
+        <p>MRP: <del>₹629.00</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/HP-U1-TF-CARD-32GB-Memory-Card-491838266-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w1NzI0OXxpbWFnZS9qcGVnfGltYWdlcy9oOGEvaGVmLzkzMjU3NjIyODE1MDIuanBnfDVhZDQzMmMwYTVlNjFhNzRiMmQyNGNmZTk1YmZkN2FiZDRlZDA0YmNjZjZiZWJkMGRiNzliZDdiMGZhMjRiMmY" alt="">
+        <p class="para">HP 32 GB microSDHC Memory Card with Adapter </p>
+        <p>Deal Price: <b style="font-size: 25px;">₹399.00</b></p>
+        <p>MRP: <del>₹1,600</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/Sandisk-SDCFE-512G-GN4NN-SDCARD-491998025-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w3MzgxfGltYWdlL2pwZWd8aW1hZ2VzL2hiOS9oNjgvOTc2MDcyOTM2NjU1OC5qcGd8OWFiODRmMTgzMzAzOWQ3M2MxMGQyZTkwODdkYWE1OGE0YjhiMjc2NjA5YmI3ZWJhMTYyNDUzNDFiODVhNzc2Yg" alt="">
+        <p class="para">SanDisk Extreme Pro Cfexpress Type B Card,, 512GB </p>
+        <p>Deal Price: <b style="font-size: 25px;">₹499.00</b></p>
+        <p>MRP: <del>₹1499.00</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/SanDisk-SDSDUNB-016G-GN3IN-Memory-Cards-491229214-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w2NTQwOHxpbWFnZS9qcGVnfGltYWdlcy9oMmQvaDY3Lzg5Mzk2MzI5MTg1NTguanBnfDM0ZDQwOGI0Y2U5YTAwYTZjODUzODU5ZjMzNDMwZWRkMGM5Y2EyM2VmYTU1ZDcxNWE1MDk5NjZiMjhkYTU5ZGY" alt="">
+        <p class="para"> Sandisk Ultra 16 GB SDHC Memory Card</p>
+        <p>Deal Price: <b style="font-size: 25px;">₹399.00</b></p>
+        <p>MRP: <del>₹550.00</del></p>
+        
+        <button>OFFER AVAILABLE</button>
+    </div>
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/iBall-CR24-Memory-Cards-491378019-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNjQzOHxpbWFnZS9qcGVnfGltYWdlcy9oMmQvaDFkLzg5MTI0NTYzMTkwMDYuanBnfDI0ODRiMjhiMzUzOWEzNTJhOThhYTA3ZWNhN2M4MzJlNDdlZjU0YjI1NmQwNzE5MDI4ZGEzMGNlNTVlMjEzMmU" alt="">
+        <p class="para"> iBall CR24 MicroSD Card Reader</p>
+        <p>Deal Price: <b style="font-size: 25px;">₹249.00</b></p>
+        <p>MRP: <del>₹350.00</del></p>
+       
+        <button>OFFER AVAILABLE</button>
+    </div>
+    <div>
+        <img class="hover" src="https://www.reliancedigital.in/medias/iBall-MCR20-Memory-Cards-491378018-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyNjI5OXxpbWFnZS9qcGVnfGltYWdlcy9oYjEvaDk0Lzg5MTI4OTc3MzY3MzQuanBnfGIwM2ZkYjQ2OGZhZWI5ZmE3NTdlYjYwNjU2NGMzMjU5NmIwNzdmMTJhMDY4NjU5ODk0ZGQ0Y2Q3YmRlODQ1MGQ" alt="">
+        <p class="para">iBall MCR20 Memory Card Reader </p>
+        <p>Deal Price: <b style="font-size: 25px;">₹99.00</b></p>
+        <p>MRP: <del>₹125.00</del></p>
+       
+        <button>OFFER AVAILABLE</button>
+    </div>
+
+   
+</div>
+
+<!-- main -->
+     
+    <img src="./mmemory.jpeg" alt="">
+
+
+    <div id="dvd">
+        <div id="dslr">
+            <div class="line">
+             <p><b>PRODUCT CATEGORIES</b></p>
+             <p>Smartphones</p>
+             <p>Laptops</p>
+             <p>DSLR Cameras</p>
+             <p>Televisions</p>
+             <p>Air Conditioners</p>
+             <p>Refrigerators</p>
+             <p>Kitchen Appliances</p>
+             <p>Accessories</p>
+             <p>Personal Care & Grooming</p> 
+         
+            </div>
+         
+         
+            <div class="line">
+             <p><b>SITE INFO</b></p>
+             <p>About Reliance Digital</p>
+             <p>resQ Services</p>
+             <p>Site Map</p>
+             <p>Gift Cards</p>
+             <p>Corporate Enquires</p>
+             <p>Contact Us</p>
+            
+            </div>
+            <div class="line">
+             <p><b>RESOURCE CENTRE</b></p>
+             <p>Product Reviews</p>
+             <p>Buying Guides</p>
+             <p>How Tos</p>
+             <p>Featured Stories</p>
+             <p>Events & Happenings</p>
+         
+          </div>
+         
+            <div class="line">
+             <p><b>POLICIES</b></p>
+             <p>Terms of Use</p>
+             <p>FAQs</p>
+             <p>Cancellation and Return Policy</p>
+             <p>Pricing and Payments Policy</p>
+             <p>Shipping and Delivery Policy</p>
+             <p>Privacy Policy</p>
+             <p>E-waste Recycling Policy</p>
+             <p>EMI and Additional Cashback T&C</p>
+             <p>RelianceOne Loyalty Program T&C</p>
+             <p>Caution Notice</p>
+          </div>  
+          
+         </div>
+        <div id="hina">
+            <div>
+                <h3 class="twiter">FOLLOW US</h3>
+                <img class="logos" src="https://cdn.iconscout.com/icon/free/png-128/instagram-1868978-1583142.png" alt="">
+                <img class="logos" src="https://cdn.iconscout.com/icon/free/png-128/youtube-1464540-1239451.png" alt="">
+                <img class="logos" src="https://cdn.iconscout.com/icon/free/png-128/twitter-44-125621.png" alt="">
+                
+             </div>
+             <div>
+                <h3 class="twiter">EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h3> 
+                <img class="fb" src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
+                <img  class="fb" src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
+             </div>
+               
+        </div>
+    </div>
+</body>
+
+</html>

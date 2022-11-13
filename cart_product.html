@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      /* Write all necessery css here  */
+      .nav{
+        text-align: center;
+      }
+      #cart-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    #checkout-div{
+        display: flex;
+        justify-content: space-between;
+    }
+    #cart-container>div>img{
+        width: 65%;
+       height: 200px;
+        
+    }
+    #cart-container>div{
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+       
+       
+    }
+    button{
+      width: 150px;
+      /* border-radius: 15px; */
+      background-color: rgb(123, 156, 79);
+      /* color: white; */
+      margin-right: 1%;
+      border: 0px solid white;
+      height: 30px;
+    }
+
+    #product-container>div {
+      box-shadow: rgba(27, 21, 21, 0.35) 0px 5px 15px;
+      padding: 10px 20px 30px 20px;
+      text-align: center;
+    }
+
+    #cart-container>div:hover {
+      background-color: rgb(20, 158, 112);
+    }
+
+      /* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+    #cart-container{
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+    /* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+    #cart-container{
+        grid-template-columns: repeat(1,1fr); 
+    }
+} 
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Best Electronic Gadgets</h1>
+      <a style="text-decoration: none; color: rgb(138, 11, 138);" href="./index.html">Home Page</a>
+      <a style="text-decoration: none; color: rgb(134, 31, 134);" href="./Electronics.html">Main Page</a>
+  
+    </div>
+
+    <div id="checkout-div">
+        <h1>Total Cart Price: <span id="totalPrice">0</span></h1>
+        <button id="checkout">Checkout</button>
+    </div>
+    <!-- <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1> -->
+    <div id="cart-container">
+      <!-- Here Append All the cart carts  -->
+   
+
+    </div>
+    
+  </body>
+  
+</html>
+
+<script>
+  // Write all necessery JS here 
+let empty=[]
+
+
+  let cartitem=JSON.parse(localStorage.getItem("myproduct"));
+    console.log(cartitem)
+    displaytable(cartitem)
+  function displaytable(cartitem){
+  console.log(cartitem);
+  let totalPrice=0
+
+  cartitem.forEach((element,index)=>{
+    totalPrice+=element.price
+    // element.data.forEach((element)=>{
+    let div = document.createElement("div")
+    
+    let img = document.createElement("img")
+    img.setAttribute("src",element.img)  
+
+    let brand = document.createElement("h2")
+    brand.innerText = element.brand;
+
+    let price = document.createElement("h3")
+    price.innerText = element.price
+
+    let det =document.createElement("p")
+    det.innerText = element.details
+
+    let cat = document.createElement("p")
+    cat.innerText = element.category;
+
+    // let btn1 =document.createElement("button")
+    // btn1.innerText = "Remove from card";
+
+    // btn1.addEventListener("click",function(){
+    //     delete(element,i)
+    // })
+
+
+
+    let btn2 = document.createElement("button")
+    btn2.innerText =  "Remove";
+    btn2.addEventListener("click",function(){
+        cartitem.splice(index,1);
+        localStorage.setItem("myproduct",JSON.stringify(cartitem));
+        window.location.reload()
+
+    })
+
+    div.append(img,brand,price,det,cat,btn2)
+    document.querySelector("#cart-container").append(div)
+
+
+    // localStorage.clear("cartitem")
+
+
+  });
+// })
+document.querySelector("#totalPrice").innerText="₹ "+totalPrice
+document.querySelector("#checkout").addEventListener("click",function(){
+    localStorage.setItem("total-price",totalPrice)
+    window.location.href="Payment-pg.html"
+})
+
+
+}  
+    
+    function delte(element,i){
+    cartitem.splice(i,1)
+    empty.push(element)
+    displaytable(cartitem)
+localStorage.setItem("delete-item",JSON.stringify(empty))
+localStorage.setItem("deleted",JSON.stringify(cartitem))
+
+    }
+
+
+
+</script>
