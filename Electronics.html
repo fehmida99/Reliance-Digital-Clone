@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <style>
+    /* Write all necessery css here  */
+    .nav {
+      display: flex;
+      border: 0px solid red;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .nav>h1 {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    .nav>a {
+      margin-right: 10%;
+    }
+    #filter{
+      width: 300px;
+      height: 30px;
+      background-color:rgb(5, 5, 125) ;
+      color: white;
+      border: 0px solid white;
+      font-weight: bold;
+    }
+
+    #cent{
+      text-align: center;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+
+    #product-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: auto;
+      gap: 30px 40px;
+      width: 95%;
+      margin: auto;
+    }
+
+    #product-container>div>img {
+      height: 200px;
+      width: 85%;
+    }
+
+    #product-container>div>button {
+      background-color:rgb(5, 5, 125) ;
+      color: white;
+      width: 180px;
+      height: 30px;
+      font-weight: bold;
+      border: 0px solid white;
+    }
+
+    #product-container>div {
+      box-shadow: rgba(27, 21, 21, 0.35) 0px 5px 15px;
+      padding: 10px 20px 30px 20px;
+      text-align: center;
+    }
+
+    #product-container>div:hover {
+      background-color: rgb(209, 187, 187);
+    }
+    @media all and (min-width: 451px) and (max-width: 750px) {
+    #cart-container{
+        grid-template-columns: repeat(2,1fr); 
+    }
+}
+    /* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+    #cart-container{
+        grid-template-columns: repeat(1,1fr); 
+    }
+} 
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h1 style="color:rgb(5, 5, 125) ; ;">Digital Express - Best Items</h1>
+    <a style="text-decoration: none;" href="./index.html">Home Page</a>
+    <a style="text-decoration: none;" href="./cart_product.html">Cart Page</a>
+  </div>
+  <!-- Use this Select Tag for Filtering the Products  -->
+  <div id="cent">
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Speakers">Speakers</option>
+    </select>
+  </div>
+  <div id="product-container">
+    <!-- Here Append All the Products  -->
+  </div>
+</body>
+<script>
+  // Write all necessery JS here 
+  let bag = []
+  let cartitem=JSON.parse(localStorage.getItem("myproduct"))||[];
+  let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      bag.push(data)
+
+      display(bag);
+    })
+    .catch((err) => alert(err))
+
+  function display(bag) {
+    bag.forEach((elem) => {
+     elem.data.forEach((elem) => {
+        let div = document.createElement("div");
+        let my_img = document.createElement("img")
+        my_img.setAttribute("src", elem.img)
+        let brand = document.createElement("h2")
+        brand.innerText = elem.brand
+        let price = document.createElement("h3")
+        price.innerText = elem.price
+        let details = document.createElement("p")
+        details.innerText = elem.details
+        let cat = document.createElement("p");
+        cat.innerText = elem.category
+        let btn = document.createElement("button")
+        btn.innerText = "Add To Cart"
+        btn.addEventListener("click", function () {
+          my_cart(elem)
+          cartitem.push(elem);
+          localStorage.setItem("myproduct",JSON.stringify(cartitem));
+
+        })
+        div.append(my_img, brand, price, details, cat, btn)
+        document.querySelector("#product-container").append(div)
+      })
+    });
+
+  }
+  document.querySelector("#filter").addEventListener("change", my_fill)
+  function my_fill() {
+    let selected = document.querySelector("#filter").value;
+    bag.forEach((elem) => {
+      let x = elem.data.filter((elem) => {
+        return elem.category == selected
+      })
+      my_fun(x)
+    })
+  }
+
+  function my_fun(x) {
+    document.querySelector("#product-container").innerHTML = "";
+    x.forEach((elem) => {
+      let div = document.createElement("div");
+      let my_img = document.createElement("img")
+      my_img.setAttribute("src", elem.img)
+      let brand = document.createElement("h2")
+      brand.innerText = elem.brand
+      let price = document.createElement("h3")
+      price.innerText = elem.price
+      let details = document.createElement("p")
+      details.innerText = elem.details
+      let cat = document.createElement("p");
+      cat.innerText = elem.category
+      let btn = document.createElement("button")
+      btn.innerText = "Add To Cart"
+      div.append(my_img, brand, price, details, cat, btn)
+      document.querySelector("#product-container").append(div)
+    })
+  }
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+
+  function my_cart(elem) {
+    if (cartItems.includes(elem)) {
+      alert("Product Already in Cart")
+    } else {
+      cartItems.push(elem)
+      localStorage.setItem("cart", JSON.stringify(cartItems))
+      alert("Product Added To Cart")
+    }
+  }
+
+</script>
+
+</html>

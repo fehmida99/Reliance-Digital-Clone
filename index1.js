@@ -109,49 +109,51 @@ const iphone = document.querySelector("#phone_img");
 
 //Evaluation part
 
-let bag = []
-
-let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => {
+// let bag = []
+// let cartitem = JSON.parse(localStorage.getItem("product"))||[];
+// let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
+// fetch(url)
+//   .then((res) => res.json())
+//   .then((data) => {
    
-    newData=data
-    display(data);
-    console.log(bag)
-  })
-  .catch((err) => alert(err))
+//     newData=data
+//     display(data);
+//     console.log(bag)
+//   })
+//   .catch((err) => alert(err))
 
-function display(bag) {
+// function display(bag) {
     // console.log("bag",bag)
-    document.querySelector("#product-container").innerHTML=""
+//     document.querySelector("#product-container").innerHTML=""
  
-    bag.data.forEach((elem) => {
-      let div = document.createElement("div");
-      let my_img = document.createElement("img")
-      my_img.setAttribute("src", elem.img)
-      let brand = document.createElement("h2")
-      brand.innerText = elem.brand
-      let price = document.createElement("h3")
-      price.innerText = elem.price
-      let details = document.createElement("p")
-      details.innerText = elem.details
-      let cat = document.createElement("p");
-      cat.innerText = elem.category
-      let btn = document.createElement("button")
-      btn.innerText = "Add To Cart"
-      btn.addEventListener("click", function () {
-        my_cart(elem)
-      })
-      div.append(my_img, brand, price, details, cat, btn)
-      document.querySelector("#product-container").append(div)
-    })
+//     bag.data.forEach((elem) => {
+//       let div = document.createElement("div");
+//       let my_img = document.createElement("img")
+//       my_img.setAttribute("src", elem.img)
+//       let brand = document.createElement("h2")
+//       brand.innerText = elem.brand
+//       let price = document.createElement("h3")
+//       price.innerText = elem.price
+//       let details = document.createElement("p")
+//       details.innerText = elem.details
+//       let cat = document.createElement("p");
+//       cat.innerText = elem.category
+//       let btn = document.createElement("button")
+//       btn.innerText = "Add To Cart"
+//       btn.addEventListener("click", function () {
+//         my_cart(elem)
+//         cartitem.push(elem);
+//         localStorage.setItem("product",JSON.stringify(cartitem))
+//          console.log(cartitem)
+//       })
+//       div.append(my_img, brand, price, details, cat, btn)
+//       document.querySelector("#product-container").append(div)
+//     })
 
-
-}
-document.querySelector("#filter").addEventListener("change", my_fill)
-function my_fill() {
-  let selected = document.querySelector("#filter").value;
+// }
+// document.querySelector("#filter").addEventListener("change", my_fill)
+// function my_fill() {
+//   let selected = document.querySelector("#filter").value;
 //   newData.data.forEach((elem) => {
 //     let x = elem.data.filter((elem) => {
 //       return elem.category == selected;
@@ -164,69 +166,75 @@ function my_fill() {
 //   })
 
 // console.log(newData)
-let finaldata = newData.data.filter((el)=>{
-    if(el.category==selected){
-        return el
-    }
+// let finaldata = newData.data.filter((el)=>{
+//     if(el.category==selected){
+//         return el
+//     }
 
-})
+// })
 
-let obj ={
-    data:finaldata,
-    totalPages:1
-}
-display(obj)
-}
-document.querySelector("#box").addEventListener("change",Sorting)
-function Sorting(){
+// let obj ={
+//     data:finaldata,
+//     totalPages:1
+// }
+// display(obj)
+// }
+// document.querySelector("#box").addEventListener("change",Sorting)
+// function Sorting(){
     
-    console.log("ndata",newData)
-    let finaldata;
-    let sorted = document.querySelector("#box").value
-        if(sorted == "LTH"){
-            finaldata= newData.data.sort((a,b)=>a.price-b.price)
-         }
-        if(sorted=="HTL") {
-            finaldata= newData.data.sort((a,b)=>b.price-a.price)
-         }
-         let obj={
-            data:finaldata,
-            totalPages:1
+//     console.log("ndata",newData)
+//     let finaldata;
+//     let sorted = document.querySelector("#box").value
+//         if(sorted == "LTH"){
+//             finaldata= newData.data.sort((a,b)=>a.price-b.price)
+//          }
+//         if(sorted=="HTL") {
+//             finaldata= newData.data.sort((a,b)=>b.price-a.price)
+//          }
+//          let obj={
+//             data:finaldata,
+//             totalPages:1
             
-         }
-         display(obj)
+//          }
+//          display(obj)
  
     
-}
+// }
 
-function my_fun(x) {
-  document.querySelector("#product-container").innerHTML = "";
-  x.forEach((elem) => {
-    let div = document.createElement("div");
-    let my_img = document.createElement("img")
-    my_img.setAttribute("src", elem.img)
-    let brand = document.createElement("h2")
-    brand.innerText = elem.brand
-    let price = document.createElement("h3")
-    price.innerText = elem.price
-    let details = document.createElement("p")
-    details.innerText = elem.details
-    let cat = document.createElement("p");
-    cat.innerText = elem.category
-    let btn = document.createElement("button")
-    btn.innerText = "Add To Cart"
-    div.append(my_img, brand, price, details, cat, btn)
-    document.querySelector("#product-container").append(div)
-  })
-}
-let cartItems = JSON.parse(localStorage.getItem("cart")) || []
+// function my_fun(x) {
+//   document.querySelector("#product-container").innerHTML = "";
+//   x.forEach((elem) => {
+//     let div = document.createElement("div");
+//     let my_img = document.createElement("img")
+//     my_img.setAttribute("src", elem.img)
+//     let brand = document.createElement("h2")
+//     brand.innerText = elem.brand
+//     let price = document.createElement("h3")
+//     price.innerText = elem.price
+//     let details = document.createElement("p")
+//     details.innerText = elem.details
+//     let cat = document.createElement("p");
+//     cat.innerText = elem.category
+//     let btn = document.createElement("button")
+//     btn.innerText = "Add To Cart"
+//     div.append(my_img, brand, price, details, cat, btn)
+//     document.querySelector("#product-container").append(div)
+//   })
+// }
+// let cartItems = JSON.parse(localStorage.getItem("cart")) || []
 
-function my_cart(elem) {
-  if (cartItems.includes(elem)) {
-    alert("Product Already in Cart")
-  } else {
-    cartItems.push(elem)
-    localStorage.setItem("cart", JSON.stringify(cartItems))
-    alert("Product Added To Cart")
-  }
-}
+// function my_cart(elem) {
+//   if (cartItems.includes(elem)) {
+//     alert("Product Already in Cart")
+//   } else {
+//     cartItems.push(elem)
+//     localStorage.setItem("cart", JSON.stringify(cartItems))
+//     alert("Product Added To Cart")
+//   }
+// }
+
+
+
+
+
+
